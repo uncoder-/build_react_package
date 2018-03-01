@@ -1,0 +1,26 @@
+{
+	"name": "@uncoder/handwriting",
+	"version": "1.1.1",
+	"description": "打包样本",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-plugin-external-helpers": "^6.22.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-preset-react": "^6.24.1",
+		"babel-preset-stage-2": "^6.24.1",
+		"less": "^3.0.1",
+		"regenerator": "^0.12.3",
+		"rollup": "^0.56.3",
+		"rollup-plugin-babel": "^3.0.3",
+		"rollup-plugin-commonjs": "^8.3.0",
+		"rollup-plugin-node-resolve": "^3.0.3",
+		"rollup-plugin-postcss": "^1.3.1"
+	},
+	"scripts": {
+		"build": "rollup -c",
+		"build-gen": "rollup -c && yarn gen",
+		"gen": "regenerator --include-runtime dest dist"
+	}
+}

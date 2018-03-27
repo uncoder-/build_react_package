@@ -8,7 +8,7 @@ export default {
 	output: [
 		{
 			file: 'dest/index.js',
-			format: 'cjs',
+			format: 'es',
 		},
 	],
 	external: ['react', 'react-dom', 'prop-types'],

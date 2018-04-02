@@ -4,10 +4,10 @@ import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 
 export default {
-	input: 'index.jsx',
+	input: 'src/index.jsx',
 	output: [
 		{
-			file: 'dest/index.js',
+			file: 'dist/index.js',
 			format: 'es',
 		},
 	],
@@ -15,9 +15,7 @@ export default {
 	plugins: [
 		resolve(),
 		commonjs(),
-		postcss({
-			minimize: true,
-		}),
+		postcss({ minimize: true, }),
 		babel({
 			exclude: 'node_modules/**',
 		}),

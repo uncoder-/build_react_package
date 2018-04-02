@@ -5,8 +5,9 @@
 # 运行
 
 ```
-yarn build or yarn build-gen
+yarn build
 ```
 
 # 备注
-因为使用了async/await，如果使用了`babel`的`Regeneratortransform`或者不使用可以直接`build`
+
+图片不能打包，可以弄成base64内联进去，但是大图就很尴尬了啊。。

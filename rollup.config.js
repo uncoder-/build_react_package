@@ -7,7 +7,7 @@ export default {
 	input: 'src/index.jsx',
 	output: [
 		{
-			file: 'dist/index.js',
+			file: 'lib/index.js',
 			format: 'es',
 		},
 	],
@@ -17,7 +17,21 @@ export default {
 		commonjs(),
 		postcss({ minimize: true, }),
 		babel({
-			exclude: 'node_modules/**',
+			runtimeHelpers: true,
+			babelrc: false,
+			presets: [['@babel/env', { modules: false }], '@babel/preset-react'],
+			plugins: [
+				[
+					'@babel/plugin-transform-runtime',
+					{
+						corejs: false,
+						helpers: false,
+						regenerator: true,
+						useESModules: false
+					}
+				],
+				['@babel/plugin-proposal-class-properties', { loose: false }]
+			]
 		}),
 	],
 };

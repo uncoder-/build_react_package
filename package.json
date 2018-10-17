@@ -2,7 +2,7 @@
 	"name": "@uncoder/test",
 	"version": "1.1.1",
 	"description": "打包样本",
-	"main": "dist/index.js",
+	"main": "lib/index.js",
 	"license": "MIT",
 	"dependencies": {
 		"@babel/runtime": "^7.1.2"
@@ -20,9 +20,10 @@
 		"rollup-plugin-node-resolve": "^3.0.3",
 		"rollup-plugin-postcss": "^1.6.2"
 	},
+	"files": [
+		"lib"
+	],
 	"scripts": {
-		"build": "rollup -c",
-		"build-gen": "rollup -c && yarn gen",
-		"gen": "regenerator --include-runtime dest dist"
+		"build": "rollup -c"
 	}
 }
